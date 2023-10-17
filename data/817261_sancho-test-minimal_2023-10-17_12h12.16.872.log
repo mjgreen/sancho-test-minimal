@@ -1,0 +1,21 @@
+821.0932 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000272C6665DF0>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000272C6665D90>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000272C6665BB0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000272C65BEBB0>, multiSample=False, name='window1', numSamples=2, pos=(1320, 320), screen=0, size=array([800, 800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+821.0933 	EXP 	window1: mouseVisible = True
+821.0934 	EXP 	window1: backgroundImage = ''
+821.0934 	EXP 	window1: backgroundFit = 'none'
+821.0953 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+821.0954 	EXP 	window1: recordFrameIntervals = False
+821.2595 	EXP 	window1: recordFrameIntervals = True
+821.4433 	EXP 	Screen (0) actual frame rate measured at 59.96Hz
+821.4433 	EXP 	window1: recordFrameIntervals = False
+821.4434 	EXP 	window1: mouseVisible = True
+821.4781 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+823.9036 	EXP 	sancho-test-minimal: status = STARTED
+823.9042 	EXP 	window1: mouseVisible = True
+823.9231 	EXP 	Created mylabel1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='mylabel1', opacity=1.0, ori=0.0, pos=array([0.3, 0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+823.9233 	EXP 	window1: mouseVisible = True
+823.9245 	EXP 	Created myshape1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='myshape1', opacity=1.0, ori=0.0, pos=array([-0.3,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+823.9246 	EXP 	window1: mouseVisible = True
+823.9258 	EXP 	Created goo = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='goo', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+0.0194 	EXP 	Created sequence: random, trialTypes=1, nReps=5, seed=None
+0.0197 	EXP 	New trial (rep=0, index=0): None
+0.1166 	EXP 	window1: mouseVisible = True

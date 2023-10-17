@@ -1,0 +1,117 @@
+6.3209 	EXP 	Created window1 = Window(allowGUI=True, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000022937A44D30>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000022937A44CD0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0, 0, 0]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x0000022937A44AC0>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x0000022937C5EAC0>, multiSample=False, name='window1', numSamples=2, pos=(1320, 320), screen=0, size=array([800, 800]), stencilBits=0, stereo=False, title='PsychoPy', units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+6.3210 	EXP 	window1: mouseVisible = True
+6.3210 	EXP 	window1: backgroundImage = ''
+6.3210 	EXP 	window1: backgroundFit = 'none'
+6.3229 	EXP 	window1: Attempting to measure frame rate of screen (0) ...
+6.3229 	EXP 	window1: recordFrameIntervals = False
+6.4874 	EXP 	window1: recordFrameIntervals = True
+6.6708 	EXP 	Screen (0) actual frame rate measured at 59.95Hz
+6.6709 	EXP 	window1: recordFrameIntervals = False
+6.6709 	EXP 	window1: mouseVisible = True
+6.7034 	WARNING 	launchHubServer: If using the iohub mouse or eyetracker devices, fullScr should be True.
+9.0116 	EXP 	sancho-test-minimal: status = STARTED
+9.0121 	EXP 	window1: mouseVisible = True
+9.0365 	EXP 	Created text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='text', opacity=1.0, ori=0.0, pos=array([0., 0.]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.0367 	EXP 	window1: mouseVisible = True
+9.0380 	EXP 	Created mylabel1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='mylabel1', opacity=1.0, ori=0.0, pos=array([0.3, 0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+9.0381 	EXP 	window1: mouseVisible = True
+9.0393 	EXP 	Created myshape1 = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, draggable=False, flipHoriz=False, flipVert=False, font='Open Sans', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='myshape1', opacity=1.0, ori=0.0, pos=array([-0.3,  0. ]), rgb=UNKNOWN, text='', units='height', win=Window(...), wrapWidth=1)
+0.0166 	EXP 	Created sequence: random, trialTypes=1, nReps=5, seed=None
+0.0168 	EXP 	New trial (rep=0, index=0): None
+0.0687 	EXP 	text: height = 0.05
+0.0687 	EXP 	text: height = 0.05
+0.0687 	EXP 	text: height = 0.05
+0.0687 	EXP 	text: text = 'This is N = 1'
+0.0687 	EXP 	text: autoDraw = True
+2.4045 	DATA 	Keypress: space
+2.4194 	EXP 	text: autoDraw = False
+2.4194 	EXP 	mylabel1: height = 0.05
+2.4194 	EXP 	mylabel1: height = 0.05
+2.4194 	EXP 	mylabel1: height = 0.05
+2.4194 	EXP 	mylabel1: text = 'sky'
+2.4194 	EXP 	myshape1: height = 0.05
+2.4194 	EXP 	myshape1: height = 0.05
+2.4194 	EXP 	myshape1: height = 0.05
+2.4194 	EXP 	myshape1: text = 'Square'
+2.4194 	EXP 	mylabel1: autoDraw = True
+2.4194 	EXP 	myshape1: autoDraw = True
+16.6270 	EXP 	New trial (rep=1, index=0): None
+16.6331 	DATA 	Keypress: space
+16.6424 	EXP 	mylabel1: autoDraw = False
+16.6424 	EXP 	myshape1: autoDraw = False
+16.6424 	EXP 	text: height = 0.05
+16.6424 	EXP 	text: height = 0.05
+16.6424 	EXP 	text: height = 0.05
+16.6424 	EXP 	text: text = 'This is N = 2'
+16.6424 	EXP 	text: autoDraw = True
+17.8398 	DATA 	Keypress: space
+17.8592 	EXP 	text: autoDraw = False
+17.8592 	EXP 	mylabel1: height = 0.05
+17.8592 	EXP 	mylabel1: height = 0.05
+17.8592 	EXP 	mylabel1: height = 0.05
+17.8592 	EXP 	mylabel1: text = 'earth'
+17.8592 	EXP 	myshape1: height = 0.05
+17.8592 	EXP 	myshape1: height = 0.05
+17.8592 	EXP 	myshape1: height = 0.05
+17.8592 	EXP 	myshape1: text = 'Circle'
+17.8592 	EXP 	mylabel1: autoDraw = True
+17.8592 	EXP 	myshape1: autoDraw = True
+18.9136 	EXP 	New trial (rep=2, index=0): None
+18.9194 	DATA 	Keypress: space
+18.9289 	EXP 	mylabel1: autoDraw = False
+18.9289 	EXP 	myshape1: autoDraw = False
+18.9289 	EXP 	text: height = 0.05
+18.9289 	EXP 	text: height = 0.05
+18.9289 	EXP 	text: height = 0.05
+18.9289 	EXP 	text: text = 'This is N = 3'
+18.9289 	EXP 	text: autoDraw = True
+19.9387 	DATA 	Keypress: space
+19.9470 	EXP 	text: autoDraw = False
+19.9470 	EXP 	mylabel1: text = 'earth'
+19.9470 	EXP 	myshape1: height = 0.05
+19.9470 	EXP 	myshape1: height = 0.05
+19.9470 	EXP 	myshape1: height = 0.05
+19.9470 	EXP 	myshape1: text = 'Triangle'
+19.9470 	EXP 	mylabel1: autoDraw = True
+19.9470 	EXP 	myshape1: autoDraw = True
+21.1499 	EXP 	New trial (rep=3, index=0): None
+21.1556 	DATA 	Keypress: space
+21.1655 	EXP 	mylabel1: autoDraw = False
+21.1655 	EXP 	myshape1: autoDraw = False
+21.1655 	EXP 	text: height = 0.05
+21.1655 	EXP 	text: height = 0.05
+21.1655 	EXP 	text: height = 0.05
+21.1655 	EXP 	text: text = 'This is N = 4'
+21.1655 	EXP 	text: autoDraw = True
+22.0886 	DATA 	Keypress: space
+22.0999 	EXP 	text: autoDraw = False
+22.0999 	EXP 	mylabel1: height = 0.05
+22.0999 	EXP 	mylabel1: height = 0.05
+22.0999 	EXP 	mylabel1: height = 0.05
+22.0999 	EXP 	mylabel1: text = 'sky'
+22.0999 	EXP 	myshape1: text = 'Triangle'
+22.0999 	EXP 	mylabel1: autoDraw = True
+22.0999 	EXP 	myshape1: autoDraw = True
+23.9874 	EXP 	New trial (rep=4, index=0): None
+23.9930 	DATA 	Keypress: space
+24.0031 	EXP 	mylabel1: autoDraw = False
+24.0031 	EXP 	myshape1: autoDraw = False
+24.0031 	EXP 	text: height = 0.05
+24.0031 	EXP 	text: height = 0.05
+24.0031 	EXP 	text: height = 0.05
+24.0031 	EXP 	text: text = 'This is N = 5'
+24.0031 	EXP 	text: autoDraw = True
+25.0931 	DATA 	Keypress: space
+25.1044 	EXP 	text: autoDraw = False
+25.1044 	EXP 	mylabel1: text = 'sky'
+25.1044 	EXP 	myshape1: height = 0.05
+25.1044 	EXP 	myshape1: height = 0.05
+25.1044 	EXP 	myshape1: height = 0.05
+25.1044 	EXP 	myshape1: text = 'Square'
+25.1044 	EXP 	mylabel1: autoDraw = True
+25.1044 	EXP 	myshape1: autoDraw = True
+26.1908 	DATA 	Keypress: space
+26.2061 	EXP 	mylabel1: autoDraw = False
+26.2061 	EXP 	myshape1: autoDraw = False
+26.2062 	EXP 	sancho-test-minimal: status = STOPPED
+26.3268 	EXP 	window1: mouseVisible = True
