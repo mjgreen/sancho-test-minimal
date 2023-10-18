@@ -5,10 +5,10 @@
     <Param val="ptb" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
-    <Param val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="u'data/%s_%s_%s' % (expInfo['sancho-test-minimal'], expName, expInfo['date'])" valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="" valType="str" updates="None" name="End Message"/>
-    <Param val="{'participant': 'f&quot;{randint(0, 999999):06.0f}&quot;', 'session': '001'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="{'sancho-test-minimal': &quot;['yes', 'no']&quot;}" valType="code" updates="None" name="Experiment info"/>
     <Param val="True" valType="bool" updates="None" name="Force stereo"/>
     <Param val="False" valType="bool" updates="None" name="Full-screen window"/>
     <Param val="" valType="str" updates="None" name="HTML path"/>
@@ -26,7 +26,7 @@
     <Param val="False" valType="bool" updates="None" name="Show mouse"/>
     <Param val="height" valType="str" updates="None" name="Units"/>
     <Param val="" valType="str" updates="None" name="Use version"/>
-    <Param val="[800,800]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="[1500,800]" valType="list" updates="None" name="Window size (pixels)"/>
     <Param val="none" valType="str" updates="None" name="backgroundFit"/>
     <Param val="" valType="str" updates="None" name="backgroundImg"/>
     <Param val="avg" valType="str" updates="None" name="blendMode"/>
@@ -70,6 +70,56 @@
   </Settings>
   <Routines>
     <Routine name="show">
+      <TextComponent name="which_participant" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="which_participant" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, .3)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$msg" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="put_task" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="put_task" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$this_task_msg" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
       <RoutineSettingsComponent name="show" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
@@ -98,7 +148,7 @@
         <Param val="mylabel1" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0.3, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-.5, 0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -106,7 +156,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$Label1_type" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$Label1_type_msg" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -123,7 +173,7 @@
         <Param val="myshape1" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(-.3, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="(.3,0)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -131,11 +181,11 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$Shape1_shape_name" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$Shape1_msg" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <TextComponent name="which_participant" plugin="None">
+      <TextComponent name="mylabel2" plugin="None">
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
@@ -145,10 +195,10 @@
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
         <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
         <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="which_participant" valType="code" updates="None" name="name"/>
+        <Param val="mylabel2" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
-        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="(-.5, -.1)" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
@@ -156,7 +206,82 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="$msg" valType="str" updates="set every repeat" name="text"/>
+        <Param val="$Label2_type_msg" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="myshape2" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="myshape2" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(.3, -.1)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$Shape2_msg" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="mylabel3" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="mylabel3" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(-.5, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$Label3_type_msg" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <TextComponent name="myshape3" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="myshape3" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(.3, -.2)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$Shape3_msg" valType="str" updates="set every repeat" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
@@ -202,7 +327,7 @@
         <Param val="p=0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="p = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="p=p+1&amp;#10;msg=&quot;This is N = &quot;+str(p)" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="p=p+1&amp;#10;msg=&quot;This is participant number &quot;+str(p)" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -236,7 +361,7 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="import random&amp;#10;mytasks = [&quot;control&quot;, &quot;reward&quot;, &quot;valence&quot;]&amp;#10;random.shuffle(mytasks)&amp;#10;&amp;#10;if mytasks[0] == &quot;control&quot;:&amp;#10;&amp;#10;    possible_labels=['air', 'earth', 'sky']&amp;#10;    random.shuffle(possible_labels)&amp;#10;    Label1_type = possible_labels[0]&amp;#10;    Label2_type = possible_labels[1]&amp;#10;    Label3_type = possible_labels[2]&amp;#10;&amp;#10;    indices=[0,1,2]&amp;#10;    random.shuffle(indices)&amp;#10;    #[1,0,2]&amp;#10;    possible_file_names =  ['Triangle.bmp', 'Square.bmp', 'Circle.bmp']&amp;#10;    possible_shape_names = ['Triangle',     'Square',     'Circle']&amp;#10;&amp;#10;    Shape1_shape_name = possible_shape_names[indices[0]] # possible_shape_names[1]  label='Square'&amp;#10;    Shape1_file_name = possible_file_names[indices[0]] # possible_file_names[1] filename is 'Square.bmp'&amp;#10;&amp;#10;    Shape2_shape_name = possible_shape_names[indices[1]]&amp;#10;    Shape2_file_name = possible_file_names[indices[1]]&amp;#10;&amp;#10;    Shape1_shape_name = possible_shape_names[indices[2]]&amp;#10;    Shape1_file_name = possible_file_names[indices[2]]&amp;#10;&amp;#10;elif mytasks[0] == &quot;reward&quot;:&amp;#10;    # then &amp;#10;     possible_labels=['high', 'medium', 'none']&amp;#10;     random.shuffle(possible_labels)&amp;#10;     Label1_type = possible_labels[0]&amp;#10;     Label2_type = possible_labels[1]&amp;#10;     Label3_type = possible_labels[2]&amp;#10;&amp;#10;     indices=[0,1,2]&amp;#10;     random.shuffle(indices)&amp;#10;     # [2,0,1]&amp;#10;     possible_file_names =  ['Pentagon.bmp', 'Diamond.bmp', 'Oval.bmp']&amp;#10;     possible_shape_names = ['Pentagon',     'Diamond',     'Oval']&amp;#10;&amp;#10;     Shape1_shape_name = possible_shape_names[indices[0]] # possible_shape_names[1]  label='Oval'&amp;#10;     Shape1_file_name = possible_file_names[indices[0]] # possible_file_names[1] filename is 'Oval.bmp'&amp;#10;&amp;#10;     Shape2_shape_name = possible_shape_names[indices[1]]&amp;#10;     Shape2_file_name = possible_file_names[indices[1]]&amp;#10;&amp;#10;     Shape1_shape_name = possible_shape_names[indices[2]]&amp;#10;     Shape1_file_name = possible_file_names[indices[2]]&amp;#10;&amp;#10;elif mytasks[0] == &quot;valence&quot;:&amp;#10;    # then &amp;#10;     possible_labels=['happy', 'neutral', 'sad']&amp;#10;     random.shuffle(possible_labels)&amp;#10;     Label1_type = possible_labels[0]&amp;#10;     Label2_type = possible_labels[1]&amp;#10;     Label3_type = possible_labels[2]&amp;#10;&amp;#10;     indices=[0,1,2]&amp;#10;     random.shuffle(indices)&amp;#10;     # [0,2,1]&amp;#10;     possible_file_names =  ['Hexagon.bmp', 'Rectangle.bmp', 'Star.bmp']&amp;#10;     possible_shape_names = ['Hexagon',     'Rectangle',     'Star']&amp;#10;&amp;#10;     Shape1_shape_name = possible_shape_names[indices[0]] # possible_shape_names[1]  label='Hexagon'&amp;#10;     Shape1_file_name = possible_file_names[indices[0]] # possible_file_names[1] filename is 'Hexagon.bmp'&amp;#10;&amp;#10;     Shape2_shape_name = possible_shape_names[indices[1]]&amp;#10;     Shape2_file_name = possible_file_names[indices[1]]&amp;#10;&amp;#10;     Shape1_shape_name = possible_shape_names[indices[2]]&amp;#10;     Shape1_file_name = possible_file_names[indices[2]]&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="import random&amp;#10;mytasks = [&quot;control&quot;, &quot;reward&quot;, &quot;valence&quot;]&amp;#10;random.shuffle(mytasks)&amp;#10;this_task_msg = &quot;Task is: &quot; + mytasks[0]&amp;#10;&amp;#10;if mytasks[0] == &quot;control&quot;:&amp;#10;&amp;#10;    possible_labels=['air', 'earth', 'sky']&amp;#10;    random.shuffle(possible_labels)&amp;#10;    Label1_type = possible_labels[0]&amp;#10;    Label1_type_msg = &quot;Label 1 is: &quot; + Label1_type&amp;#10;    Label2_type = possible_labels[1]&amp;#10;    Label2_type_msg = &quot;Label 2 is: &quot; + Label2_type    &amp;#10;    Label3_type = possible_labels[2]&amp;#10;    Label3_type_msg = &quot;Label 3 is: &quot; + Label3_type&amp;#10;&amp;#10;    indices=[0,1,2]&amp;#10;    random.shuffle(indices)&amp;#10;    possible_file_names =  ['Triangle.bmp', 'Square.bmp', 'Circle.bmp']&amp;#10;    possible_shape_names = ['Triangle',     'Square',     'Circle']&amp;#10;&amp;#10;    Shape1_shape_name = possible_shape_names[indices[0]] &amp;#10;    Shape1_file_name  = possible_file_names[indices[0]] &amp;#10;    Shape1_msg = &quot;Shape 1 is: &quot; + Shape1_shape_name&amp;#10;    Shape2_shape_name = possible_shape_names[indices[1]]&amp;#10;    Shape2_file_name  = possible_file_names[indices[1]]&amp;#10;    Shape2_msg = &quot;Shape 2 is: &quot; + Shape2_shape_name&amp;#10;    Shape3_shape_name = possible_shape_names[indices[2]]&amp;#10;    Shape3_file_name  = possible_file_names[indices[2]]&amp;#10;    Shape3_msg = &quot;Shape 3 is: &quot; + Shape3_shape_name&amp;#10;&amp;#10;elif mytasks[0] == &quot;reward&quot;:&amp;#10;    # then &amp;#10;    possible_labels=['high', 'medium', 'none']&amp;#10;    random.shuffle(possible_labels)&amp;#10;    Label1_type = possible_labels[0]&amp;#10;    Label1_type_msg = &quot;Label 1 is: &quot; + Label1_type&amp;#10;    Label2_type = possible_labels[1]&amp;#10;    Label2_type_msg = &quot;Label 2 is: &quot; + Label2_type    &amp;#10;    Label3_type = possible_labels[2]&amp;#10;    Label3_type_msg = &quot;Label 3 is: &quot; + Label3_type&amp;#10;&amp;#10;    indices=[0,1,2]&amp;#10;    random.shuffle(indices)&amp;#10;    possible_file_names =  ['Pentagon.bmp', 'Diamond.bmp', 'Oval.bmp']&amp;#10;    possible_shape_names = ['Pentagon',     'Diamond',     'Oval']&amp;#10;&amp;#10;    Shape1_shape_name = possible_shape_names[indices[0]] &amp;#10;    Shape1_file_name  = possible_file_names[indices[0]] &amp;#10;    Shape1_msg = &quot;Shape 1 is: &quot; + Shape1_shape_name&amp;#10;    Shape2_shape_name = possible_shape_names[indices[1]]&amp;#10;    Shape2_file_name  = possible_file_names[indices[1]]&amp;#10;    Shape2_msg = &quot;Shape 2 is: &quot; + Shape2_shape_name&amp;#10;    Shape3_shape_name = possible_shape_names[indices[2]]&amp;#10;    Shape3_file_name  = possible_file_names[indices[2]]&amp;#10;    Shape3_msg = &quot;Shape 3 is: &quot; + Shape3_shape_name&amp;#10;&amp;#10;elif mytasks[0] == &quot;valence&quot;:&amp;#10;    # then &amp;#10;    possible_labels=['happy', 'neutral', 'sad']&amp;#10;    random.shuffle(possible_labels)&amp;#10;    Label1_type = possible_labels[0]&amp;#10;    Label1_type_msg = &quot;Label 1 is: &quot; + Label1_type&amp;#10;    Label2_type = possible_labels[1]&amp;#10;    Label2_type_msg = &quot;Label 2 is: &quot; + Label2_type    &amp;#10;    Label3_type = possible_labels[2]&amp;#10;    Label3_type_msg = &quot;Label 3 is: &quot; + Label3_type&amp;#10;&amp;#10;    indices=[0,1,2]&amp;#10;    random.shuffle(indices)&amp;#10;    possible_file_names =  ['Hexagon.bmp', 'Rectangle.bmp', 'Star.bmp']&amp;#10;    possible_shape_names = ['Hexagon',     'Rectangle',     'Star']&amp;#10;&amp;#10;    Shape1_shape_name = possible_shape_names[indices[0]] &amp;#10;    Shape1_file_name  = possible_file_names[indices[0]] &amp;#10;    Shape1_msg = &quot;Shape 1 is: &quot; + Shape1_shape_name&amp;#10;    Shape2_shape_name = possible_shape_names[indices[1]]&amp;#10;    Shape2_file_name  = possible_file_names[indices[1]]&amp;#10;    Shape2_msg = &quot;Shape 2 is: &quot; + Shape2_shape_name&amp;#10;    Shape3_shape_name = possible_shape_names[indices[2]]&amp;#10;    Shape3_file_name  = possible_file_names[indices[2]]&amp;#10;    Shape3_msg = &quot;Shape 3 is: &quot; + Shape3_shape_name&amp;#10;&amp;#10;# Write variables to csv output file&amp;#10;exp.addData('subjectNumber', p)&amp;#10;exp.addData('task', mytasks[0])&amp;#10;exp.addData('Label1_type', Label1_type)&amp;#10;exp.addData('Label2_type', Label2_type)&amp;#10;exp.addData('Label3_type', Label3_type)&amp;#10;exp.addData('Shape1_shape_name', Shape1_shape_name)&amp;#10;exp.addData('Shape2_shape_name', Shape2_shape_name)&amp;#10;exp.addData('Shape3_shape_name', Shape3_shape_name)&amp;#10;exp.addData('Shape1_file_name', Shape1_file_name)&amp;#10;exp.addData('Shape2_file_name', Shape2_file_name)&amp;#10;exp.addData('Shape3_file_name', Shape3_file_name)&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Py" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -257,7 +382,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="5" valType="num"/>
+      <Param name="nReps" updates="None" val="50" valType="num"/>
       <Param name="name" updates="None" val="trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>

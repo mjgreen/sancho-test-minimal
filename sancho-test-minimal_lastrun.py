@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2023.2.2),
-    on October 17, 2023, at 12:39
+    on October 18, 2023, at 21:52
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -40,8 +40,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 psychopyVersion = '2023.2.2'
 expName = 'sancho-test-minimal'  # from the Builder filename that created this script
 expInfo = {
-    'participant': f"{randint(0, 999999):06.0f}",
-    'session': '001',
+    'sancho-test-minimal': ['yes', 'no'],
     'date': data.getDateStr(),  # add a simple timestamp
     'expName': expName,
     'psychopyVersion': psychopyVersion,
@@ -97,7 +96,7 @@ def setupData(expInfo, dataDir=None):
     # data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
     if dataDir is None:
         dataDir = _thisDir
-    filename = u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
+    filename = u'data/%s_%s_%s' % (expInfo['sancho-test-minimal'], expName, expInfo['date'])
     # make sure filename is relative to dataDir
     if os.path.isabs(filename):
         dataDir = os.path.commonprefix([dataDir, filename])
@@ -107,7 +106,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='C:\\Users\\matt\\gits\\sancho-test-minimal\\sancho-test-minimal_lastrun.py',
+        originPath='C:\\Users\\Matt\\gits\\sancho-test-minimal\\sancho-test-minimal_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -158,7 +157,7 @@ def setupWindow(expInfo=None, win=None):
     if win is None:
         # if not given a window to setup, make one
         win = visual.Window(
-            size=[800,800], fullscr=False, screen=0,
+            size=[1500,800], fullscr=False, screen=0,
             winType='pyglet', allowStencil=False,
             monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
             backgroundImage='', backgroundFit='none',
@@ -321,27 +320,62 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     # --- Initialize components for Routine "setmap" ---
     
     # --- Initialize components for Routine "show" ---
-    mylabel1 = visual.TextStim(win=win, name='mylabel1',
+    which_participant = visual.TextStim(win=win, name='which_participant',
         text='',
         font='Open Sans',
-        pos=(0.3, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, .3), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=0.0);
-    myshape1 = visual.TextStim(win=win, name='myshape1',
+    put_task = visual.TextStim(win=win, name='put_task',
         text='',
         font='Open Sans',
-        pos=(-.3, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(0, 0.2), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-1.0);
-    goo = visual.TextStim(win=win, name='goo',
+    mylabel1 = visual.TextStim(win=win, name='mylabel1',
         text='',
         font='Open Sans',
-        pos=(0, 0), height=0.05, wrapWidth=None, ori=0.0, 
+        pos=(-.5, 0), height=0.05, wrapWidth=None, ori=0.0, 
         color='white', colorSpace='rgb', opacity=None, 
         languageStyle='LTR',
         depth=-2.0);
+    myshape1 = visual.TextStim(win=win, name='myshape1',
+        text='',
+        font='Open Sans',
+        pos=(.3,0), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-3.0);
+    mylabel2 = visual.TextStim(win=win, name='mylabel2',
+        text='',
+        font='Open Sans',
+        pos=(-.5, -.1), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-4.0);
+    myshape2 = visual.TextStim(win=win, name='myshape2',
+        text='',
+        font='Open Sans',
+        pos=(.3, -.1), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-5.0);
+    mylabel3 = visual.TextStim(win=win, name='mylabel3',
+        text='',
+        font='Open Sans',
+        pos=(-.5, -.2), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-6.0);
+    myshape3 = visual.TextStim(win=win, name='myshape3',
+        text='',
+        font='Open Sans',
+        pos=(.3, -.2), height=0.05, wrapWidth=None, ori=0.0, 
+        color='white', colorSpace='rgb', opacity=None, 
+        languageStyle='LTR',
+        depth=-7.0);
     key_resp = keyboard.Keyboard()
     
     # create some handy timers
@@ -356,7 +390,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
     expInfo['expStart'] = data.getDateStr(format='%Y-%m-%d %Hh%M.%S.%f %z', fractionalSecondDigits=6)
     
     # set up handler to look after randomisation of conditions etc
-    trials = data.TrialHandler(nReps=5.0, method='random', 
+    trials = data.TrialHandler(nReps=50.0, method='random', 
         extraInfo=expInfo, originPath=-1,
         trialList=[None],
         seed=None, name='trials')
@@ -390,7 +424,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         thisExp.addData('docount.started', globalClock.getTime())
         # Run 'Begin Routine' code from code
         p=p+1
-        msg="This is N = "+str(p)
+        msg="This is participant number "+str(p)
         # keep track of which components have finished
         docountComponents = []
         for thisComponent in docountComponents:
@@ -452,75 +486,85 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         import random
         mytasks = ["control", "reward", "valence"]
         random.shuffle(mytasks)
+        this_task_msg = "Task is: " + mytasks[0]
         
         if mytasks[0] == "control":
         
             possible_labels=['air', 'earth', 'sky']
             random.shuffle(possible_labels)
             Label1_type = possible_labels[0]
+            Label1_type_msg = "Label 1 is: " + Label1_type
             Label2_type = possible_labels[1]
+            Label2_type_msg = "Label 2 is: " + Label2_type    
             Label3_type = possible_labels[2]
+            Label3_type_msg = "Label 3 is: " + Label3_type
         
             indices=[0,1,2]
             random.shuffle(indices)
-            #[1,0,2]
             possible_file_names =  ['Triangle.bmp', 'Square.bmp', 'Circle.bmp']
             possible_shape_names = ['Triangle',     'Square',     'Circle']
         
-            Shape1_shape_name = possible_shape_names[indices[0]] # possible_shape_names[1]  label='Square'
-            Shape1_file_name = possible_file_names[indices[0]] # possible_file_names[1] filename is 'Square.bmp'
-        
+            Shape1_shape_name = possible_shape_names[indices[0]] 
+            Shape1_file_name  = possible_file_names[indices[0]] 
+            Shape1_msg = "Shape 1 is: " + Shape1_shape_name
             Shape2_shape_name = possible_shape_names[indices[1]]
-            Shape2_file_name = possible_file_names[indices[1]]
-        
-            Shape1_shape_name = possible_shape_names[indices[2]]
-            Shape1_file_name = possible_file_names[indices[2]]
+            Shape2_file_name  = possible_file_names[indices[1]]
+            Shape2_msg = "Shape 2 is: " + Shape2_shape_name
+            Shape3_shape_name = possible_shape_names[indices[2]]
+            Shape3_file_name  = possible_file_names[indices[2]]
+            Shape3_msg = "Shape 3 is: " + Shape3_shape_name
         
         elif mytasks[0] == "reward":
             # then 
-             possible_labels=['high', 'medium', 'none']
-             random.shuffle(possible_labels)
-             Label1_type = possible_labels[0]
-             Label2_type = possible_labels[1]
-             Label3_type = possible_labels[2]
+            possible_labels=['high', 'medium', 'none']
+            random.shuffle(possible_labels)
+            Label1_type = possible_labels[0]
+            Label1_type_msg = "Label 1 is: " + Label1_type
+            Label2_type = possible_labels[1]
+            Label2_type_msg = "Label 2 is: " + Label2_type    
+            Label3_type = possible_labels[2]
+            Label3_type_msg = "Label 3 is: " + Label3_type
         
-             indices=[0,1,2]
-             random.shuffle(indices)
-             # [2,0,1]
-             possible_file_names =  ['Pentagon.bmp', 'Diamond.bmp', 'Oval.bmp']
-             possible_shape_names = ['Pentagon',     'Diamond',     'Oval']
+            indices=[0,1,2]
+            random.shuffle(indices)
+            possible_file_names =  ['Pentagon.bmp', 'Diamond.bmp', 'Oval.bmp']
+            possible_shape_names = ['Pentagon',     'Diamond',     'Oval']
         
-             Shape1_shape_name = possible_shape_names[indices[0]] # possible_shape_names[1]  label='Oval'
-             Shape1_file_name = possible_file_names[indices[0]] # possible_file_names[1] filename is 'Oval.bmp'
-        
-             Shape2_shape_name = possible_shape_names[indices[1]]
-             Shape2_file_name = possible_file_names[indices[1]]
-        
-             Shape1_shape_name = possible_shape_names[indices[2]]
-             Shape1_file_name = possible_file_names[indices[2]]
+            Shape1_shape_name = possible_shape_names[indices[0]] 
+            Shape1_file_name  = possible_file_names[indices[0]] 
+            Shape1_msg = "Shape 1 is: " + Shape1_shape_name
+            Shape2_shape_name = possible_shape_names[indices[1]]
+            Shape2_file_name  = possible_file_names[indices[1]]
+            Shape2_msg = "Shape 2 is: " + Shape2_shape_name
+            Shape3_shape_name = possible_shape_names[indices[2]]
+            Shape3_file_name  = possible_file_names[indices[2]]
+            Shape3_msg = "Shape 3 is: " + Shape3_shape_name
         
         elif mytasks[0] == "valence":
             # then 
-             possible_labels=['happy', 'neutral', 'sad']
-             random.shuffle(possible_labels)
-             Label1_type = possible_labels[0]
-             Label2_type = possible_labels[1]
-             Label3_type = possible_labels[2]
+            possible_labels=['happy', 'neutral', 'sad']
+            random.shuffle(possible_labels)
+            Label1_type = possible_labels[0]
+            Label1_type_msg = "Label 1 is: " + Label1_type
+            Label2_type = possible_labels[1]
+            Label2_type_msg = "Label 2 is: " + Label2_type    
+            Label3_type = possible_labels[2]
+            Label3_type_msg = "Label 3 is: " + Label3_type
         
-             indices=[0,1,2]
-             random.shuffle(indices)
-             # [0,2,1]
-             possible_file_names =  ['Hexagon.bmp', 'Rectangle.bmp', 'Star.bmp']
-             possible_shape_names = ['Hexagon',     'Rectangle',     'Star']
+            indices=[0,1,2]
+            random.shuffle(indices)
+            possible_file_names =  ['Hexagon.bmp', 'Rectangle.bmp', 'Star.bmp']
+            possible_shape_names = ['Hexagon',     'Rectangle',     'Star']
         
-             Shape1_shape_name = possible_shape_names[indices[0]] # possible_shape_names[1]  label='Hexagon'
-             Shape1_file_name = possible_file_names[indices[0]] # possible_file_names[1] filename is 'Hexagon.bmp'
-        
-             Shape2_shape_name = possible_shape_names[indices[1]]
-             Shape2_file_name = possible_file_names[indices[1]]
-        
-             Shape1_shape_name = possible_shape_names[indices[2]]
-             Shape1_file_name = possible_file_names[indices[2]]
+            Shape1_shape_name = possible_shape_names[indices[0]] 
+            Shape1_file_name  = possible_file_names[indices[0]] 
+            Shape1_msg = "Shape 1 is: " + Shape1_shape_name
+            Shape2_shape_name = possible_shape_names[indices[1]]
+            Shape2_file_name  = possible_file_names[indices[1]]
+            Shape2_msg = "Shape 2 is: " + Shape2_shape_name
+            Shape3_shape_name = possible_shape_names[indices[2]]
+            Shape3_file_name  = possible_file_names[indices[2]]
+            Shape3_msg = "Shape 3 is: " + Shape3_shape_name
         
         # keep track of which components have finished
         setmapComponents = []
@@ -579,14 +623,19 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         continueRoutine = True
         # update component parameters for each repeat
         thisExp.addData('show.started', globalClock.getTime())
-        mylabel1.setText(Label1_type)
-        myshape1.setText(Shape1_shape_name)
-        goo.setText(msg)
+        which_participant.setText(msg)
+        put_task.setText(this_task_msg)
+        mylabel1.setText(Label1_type_msg)
+        myshape1.setText(Shape1_msg)
+        mylabel2.setText(Label2_type_msg)
+        myshape2.setText(Shape2_msg)
+        mylabel3.setText(Label3_type_msg)
+        myshape3.setText(Shape3_msg)
         key_resp.keys = []
         key_resp.rt = []
         _key_resp_allKeys = []
         # keep track of which components have finished
-        showComponents = [mylabel1, myshape1, goo, key_resp]
+        showComponents = [which_participant, put_task, mylabel1, myshape1, mylabel2, myshape2, mylabel3, myshape3, key_resp]
         for thisComponent in showComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -608,6 +657,46 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
             tThisFlipGlobal = win.getFutureFlipTime(clock=None)
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
+            
+            # *which_participant* updates
+            
+            # if which_participant is starting this frame...
+            if which_participant.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                which_participant.frameNStart = frameN  # exact frame index
+                which_participant.tStart = t  # local t and not account for scr refresh
+                which_participant.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(which_participant, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'which_participant.started')
+                # update status
+                which_participant.status = STARTED
+                which_participant.setAutoDraw(True)
+            
+            # if which_participant is active this frame...
+            if which_participant.status == STARTED:
+                # update params
+                pass
+            
+            # *put_task* updates
+            
+            # if put_task is starting this frame...
+            if put_task.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                put_task.frameNStart = frameN  # exact frame index
+                put_task.tStart = t  # local t and not account for scr refresh
+                put_task.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(put_task, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'put_task.started')
+                # update status
+                put_task.status = STARTED
+                put_task.setAutoDraw(True)
+            
+            # if put_task is active this frame...
+            if put_task.status == STARTED:
+                # update params
+                pass
             
             # *mylabel1* updates
             
@@ -649,23 +738,83 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
                 # update params
                 pass
             
-            # *goo* updates
+            # *mylabel2* updates
             
-            # if goo is starting this frame...
-            if goo.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # if mylabel2 is starting this frame...
+            if mylabel2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                goo.frameNStart = frameN  # exact frame index
-                goo.tStart = t  # local t and not account for scr refresh
-                goo.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(goo, 'tStartRefresh')  # time at next scr refresh
+                mylabel2.frameNStart = frameN  # exact frame index
+                mylabel2.tStart = t  # local t and not account for scr refresh
+                mylabel2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(mylabel2, 'tStartRefresh')  # time at next scr refresh
                 # add timestamp to datafile
-                thisExp.timestampOnFlip(win, 'goo.started')
+                thisExp.timestampOnFlip(win, 'mylabel2.started')
                 # update status
-                goo.status = STARTED
-                goo.setAutoDraw(True)
+                mylabel2.status = STARTED
+                mylabel2.setAutoDraw(True)
             
-            # if goo is active this frame...
-            if goo.status == STARTED:
+            # if mylabel2 is active this frame...
+            if mylabel2.status == STARTED:
+                # update params
+                pass
+            
+            # *myshape2* updates
+            
+            # if myshape2 is starting this frame...
+            if myshape2.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                myshape2.frameNStart = frameN  # exact frame index
+                myshape2.tStart = t  # local t and not account for scr refresh
+                myshape2.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(myshape2, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'myshape2.started')
+                # update status
+                myshape2.status = STARTED
+                myshape2.setAutoDraw(True)
+            
+            # if myshape2 is active this frame...
+            if myshape2.status == STARTED:
+                # update params
+                pass
+            
+            # *mylabel3* updates
+            
+            # if mylabel3 is starting this frame...
+            if mylabel3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                mylabel3.frameNStart = frameN  # exact frame index
+                mylabel3.tStart = t  # local t and not account for scr refresh
+                mylabel3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(mylabel3, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'mylabel3.started')
+                # update status
+                mylabel3.status = STARTED
+                mylabel3.setAutoDraw(True)
+            
+            # if mylabel3 is active this frame...
+            if mylabel3.status == STARTED:
+                # update params
+                pass
+            
+            # *myshape3* updates
+            
+            # if myshape3 is starting this frame...
+            if myshape3.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # keep track of start time/frame for later
+                myshape3.frameNStart = frameN  # exact frame index
+                myshape3.tStart = t  # local t and not account for scr refresh
+                myshape3.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(myshape3, 'tStartRefresh')  # time at next scr refresh
+                # add timestamp to datafile
+                thisExp.timestampOnFlip(win, 'myshape3.started')
+                # update status
+                myshape3.status = STARTED
+                myshape3.setAutoDraw(True)
+            
+            # if myshape3 is active this frame...
+            if myshape3.status == STARTED:
                 # update params
                 pass
             
@@ -737,7 +886,7 @@ def run(expInfo, thisExp, win, inputs, globalClock=None, thisSession=None):
         if thisSession is not None:
             # if running in a Session with a Liaison client, send data up to now
             thisSession.sendExperimentData()
-    # completed 5.0 repeats of 'trials'
+    # completed 50.0 repeats of 'trials'
     
     
     # mark experiment as finished
